@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+	
+	document.write("<br>");
+	document.write("<br>");
+}
+
+    function mostra(frase) {
+	
+	document.write(frase);
+	pulaLinha();
+}
+
+
+var numeroPensado = Math.round(Math.random() * 100);
+
+var tentativas = 1;
+
+var frase = "digite um número";
+
+while(tentativas <= 10) {
+    
+    var chute = parseInt(prompt(frase));
+
+    if(chute == numeroPensado) {
+	
+	mostra("Você ACERTOU!!");
+	break;
+    
+    } if (chute > numeroPensado) {
+	
+	frase = "O número é menor";
+
+    } if (chute < numeroPensado) {
+	
+	frase = "O número é maior";	
+
+    }
+
+    tentativas++;
+}
+
+mostra("O número era " + numeroPensado);
+
+
+</script>
